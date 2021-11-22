@@ -1,0 +1,52 @@
+package com.example.diary.util;
+
+import android.annotation.SuppressLint;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class MyTimeGetter {
+//时间获取
+    private int year;
+    private int month;
+    private int day;
+    private int hour;
+    private int minute;
+
+    public MyTimeGetter(){}
+
+    public MyTimeGetter(Date date){
+        @SuppressLint("SimpleDateFormat")
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd-HH-mm");
+        //创建yyyy-MM-dd-HH-mm格式的时间对象
+        String strDate = dateFormat.format(date);
+        //将date格式化，放入strDate
+        String strArray[] =  strDate.split("-");
+        //将字符串用-拆分到数组里
+        year = Integer.parseInt(strArray[0]);
+        month = Integer.parseInt(strArray[1]);
+        day = Integer.parseInt(strArray[2]);
+        hour = Integer.parseInt(strArray[3]);
+        minute = Integer.parseInt(strArray[4]);
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public int getMonth() {
+        return month;
+    }
+
+    public int getDay() {
+        return day;
+    }
+
+    public int getHour() {
+        return hour;
+    }
+
+    public int getMinute() {
+        return minute;
+    }
+}

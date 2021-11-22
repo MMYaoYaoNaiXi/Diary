@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_author"
+        android:textSize="20sp"
+        />
+    <LinearLayout
+        android:id="@+id/edit_title_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请输入作者名"
+            android:textSize="20sp"
+            />
+        <EditText
+            android:id="@+id/login_author"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="王婧琪"
+            />
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_toRightOf="@id/btn_edit_menu"
+        android:layout_toEndOf="@id/btn_edit_menu"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F0E68C"
+        android:text="登录"
+        android:textSize="25sp"
+        />
+    <!-- layout_toEndOf本元素在某个元素结束  layout_toRightOf 在某元素的右边-->
+    <!--layout_alignParentBottom 贴紧父元素的下边缘-->
+</LinearLayout>

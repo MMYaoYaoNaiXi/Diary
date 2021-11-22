@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#fffff0"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/headLayout"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:text="@string/edit_title_text"
+            />
+
+    </LinearLayout>
+    <!-- 相对布局 将子视图以相对位置显示。默认显示在父视图的左上角。-->
+    <RelativeLayout
+        android:id="@+id/body"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/edit_title_lay_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/edit_title_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:hint="@string/edit_title_time_hint"
+                />
+
+            <LinearLayout
+                android:id="@+id/edit_title_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_tile"
+                    android:textSize="15sp"
+                    />
+
+                <EditText
+                    android:id="@+id/edit_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:hint="@string/edit_hint"
+
+                    />
+
+
+            </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/edit_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/picture_show"
+            android:layout_below="@id/edit_title_lay_lay"
+            android:layout_marginTop="10dp"
+            android:gravity="start"
+            android:hint="@string/edit_body_hint"
+            android:textSize="12sp" />
+        <!--layout_above将控件置于给定ID控件之上 -->
+        <ImageView
+            android:id="@+id/picture_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_above="@id/button_save"
+            android:layout_below="@id/edit_title_lay_lay"
+            />
+        </LinearLayout>
+        <!--用于显示图片 -->
+        <Button
+            android:id="@+id/button_back"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:background="#fffff0"
+            android:text="@string/button_back"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp"
+            />
+
+        <Button
+            android:id="@+id/btn_edit_menu"
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_centerInParent="true"
+            android:layout_alignParentBottom="true"
+            />
+        <!-- visibility是否可见-->
+        <Button
+            android:id="@+id/btn_edit_addpic"
+            android:layout_width="80dp"
+            android:layout_height="45dp"
+            android:layout_toStartOf="@id/btn_edit_menu"
+            android:layout_toLeftOf="@id/btn_edit_menu"
+            android:layout_alignParentBottom="true"
+            android:background="#F0E68C"
+            android:text="添加图片"
+            android:textSize="18sp"
+            />
+        <!--  android:layout_toStartOf本元素从某个元素开始-->
+        <Button
+            android:id="@+id/btn_edit_selectpic"
+            android:layout_toRightOf="@id/btn_edit_menu"
+            android:layout_toEndOf="@id/btn_edit_menu"
+            android:layout_alignParentBottom="true"
+            android:layout_width="140dp"
+            android:layout_height="45dp"
+            android:background="#F0E68C"
+            android:text="从系统选择照片"
+            android:textSize="18sp"
+            />
+
+        <Button
+            android:id="@+id/button_save"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="#fffff0"
+            android:text="@string/button_save"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp"
+            />
+
+    </RelativeLayout>
+
+
+</LinearLayout>
